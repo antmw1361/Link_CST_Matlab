@@ -1,3 +1,4 @@
+% This is just a simple parametric sweep with CST
 clc; close all; clear all;
 filepath = 'U:\Desktop\Link_CST_Matlab\';
 %%
@@ -7,7 +8,7 @@ for R1 = [1:4]
     cst = actxserver('CSTStudio.application');
     mws = invoke(cst,'OpenFile',[filepath 'Dipole.cst']);
     filenameExport = ['Dipole_R1_' num2str(R1)];
-    invoke(mws,'StoreParameter','RHelixU',R1);
+    invoke(mws,'StoreParameter','R1',R1);
     
     mws.invoke('ReBuild');
     mws.invoke('saveas',[filenameExport '.cst'],'false');
