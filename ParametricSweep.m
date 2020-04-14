@@ -1,6 +1,6 @@
 % This is just a simple parametric sweep with CST
 clc; close all; clear all;
-filepath = 'U:\Desktop\Link_CST_Matlab\';
+filepath = [pwd '\']; % Sets filepath to current directory
 %%
 
 for R1 = [1:4]

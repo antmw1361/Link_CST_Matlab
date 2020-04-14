@@ -4,7 +4,7 @@ global filenameExport
 global cst;
 global mws;
 
-filepath = 'U:\Desktop\Link_CST_Matlab\';
+filepath = [pwd '\']; % Sets filepath to current directory
 filenameExport = 'Dipole'; %['SolidTeflon' num2str(100*Lu)];
 
     cst = actxserver('CSTStudio.application'); % Uses latest CST version
