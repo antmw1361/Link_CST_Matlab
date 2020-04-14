@@ -5,7 +5,8 @@ filepath = 'U:\Desktop\Link_CST_Matlab\';
 
 for R1 = [1:4]
     %%
-    cst = actxserver('CSTStudio.application');
+%   cst = actxserver('CSTStudio.application'); % Uses latest CST version
+    cst = actxserver('CSTStudio.application.2019'); % Specify a CST version here 2019
     mws = invoke(cst,'OpenFile',[filepath 'Dipole.cst']);
     filenameExport = ['Dipole_R1_' num2str(R1)];
     invoke(mws,'StoreParameter','R1',R1);

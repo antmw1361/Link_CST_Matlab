@@ -6,7 +6,10 @@ global mws;
 
 filepath = 'U:\Desktop\Link_CST_Matlab\';
 filenameExport = 'Dipole'; %['SolidTeflon' num2str(100*Lu)];
-cst = actxserver('CSTStudio.application');
+
+    cst = actxserver('CSTStudio.application'); % Uses latest CST version
+%   cst = actxserver('CSTStudio.application.2019'); % Specify a CST version here 2019
+
 mws = invoke(cst,'OpenFile',[filepath filenameExport '.cst']);
 
 %%
